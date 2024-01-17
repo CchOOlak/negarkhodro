@@ -7,3 +7,6 @@ class Node(models.Model):
     @property
     def children(self):
         return Node.objects.filter(parent_id=self.id)
+
+    def __str__(self) -> str:
+        return self.name
